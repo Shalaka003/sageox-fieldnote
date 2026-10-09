@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#14212d">
+  <meta name="description" content="An independent, source-linked one-pager on why a team might add SageOx to Claude and Slack.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <title>Why SageOx over Claude + Slack?</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap');
+    :root{color-scheme:light;--navy:#14212d;--ink:#1a2a34;--muted:#586674;--cream:#f5f2eb;--line:#d8ded9;--orange:#e6a06c;--mint:#c6dfd2}
+    *{box-sizing:border-box}
+    html{background:var(--cream)}
+    body{margin:0;color:var(--ink);font-family:"DM Sans",Arial,sans-serif;-webkit-font-smoothing:antialiased}
+    a{color:inherit;text-underline-offset:3px}
+    a:focus-visible{outline:3px solid #397cad;outline-offset:4px}
+    .sheet{width:min(920px,calc(100% - 32px));margin:28px auto 52px;background:#fff;box-shadow:0 20px 60px #14212d16;overflow:hidden}
+    .top{background:var(--navy);color:#fff;padding:28px 48px 42px;position:relative;overflow:hidden}
+    .top:after{content:"";position:absolute;width:360px;height:360px;right:-110px;top:-170px;border:1px solid #ffffff25;border-radius:50%;box-shadow:0 0 0 40px #ffffff08,0 0 0 80px #ffffff07;pointer-events:none}
+    .mast{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-bottom:43px;font-size:11px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;position:relative;z-index:1}
+    .brand{display:flex;align-items:center;gap:12px}
+    .mark{display:flex;align-items:center;gap:3px;height:25px}
+    .mark i{display:block;width:6px;border-radius:6px;background:var(--orange);transform:rotate(-22deg)}
+    .mark i:nth-child(1){height:13px}.mark i:nth-child(2){height:23px}.mark i:nth-child(3){height:17px}
+    .mast-note{color:#bac8d1;font-size:10px;text-align:right}
+    h1,h2,h3,p{margin-top:0}
+    h1,h2,h3{font-family:Manrope,Arial,sans-serif;letter-spacing:-.045em}
+    h1{font-size:clamp(36px,5.4vw,56px);line-height:1.07;max-width:710px;margin:0 0 18px;font-weight:800;position:relative;z-index:1}
+    h1 em{font-style:normal;color:var(--orange)}
+    .dek{font-size:17px;line-height:1.55;color:#dae3e7;max-width:750px;margin:0;position:relative;z-index:1}
+    .body{padding:36px 48px 29px}
+    .objection{display:grid;grid-template-columns:205px 1fr;gap:25px;align-items:start;padding:0 0 29px;border-bottom:1px solid var(--line)}
+    .objection h2{font-size:20px;line-height:1.28;margin:0;color:#bf6b3e}
+    .objection p{font-size:15px;line-height:1.65;margin:0;color:#394c58}
+    .section-label{font-size:10px;letter-spacing:.16em;text-transform:uppercase;font-weight:800;color:#a85d36;margin:28px 0 13px}
+    .comparison{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+    .lane{padding:21px 23px 17px}
+    .lane:first-child{background:#f7f8f7;border-right:1px solid var(--line)}
+    .lane:last-child{background:#edf5f0}
+    .lane h3{font-size:17px;margin:0 0 12px}
+    .lane ul{padding:0;margin:0;list-style:none;display:grid;gap:10px}
+    .lane li{font-size:13px;line-height:1.48;padding-left:17px;position:relative;color:#41525e}
+    .lane li:before{content:"";position:absolute;left:0;top:.5em;width:7px;height:7px;border-radius:50%;background:#b1bac0}
+    .lane:last-child li:before{background:#66a47d}
+    .benefits{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:25px}
+    .benefit{padding:0 15px 0 0;border-right:1px solid var(--line)}
+    .benefit:last-child{border:0}
+    .number{display:block;color:#bd6d43;font:800 11px Manrope,Arial,sans-serif;letter-spacing:.12em;margin-bottom:7px}
+    .benefit h3{font-size:15px;margin:0 0 5px;line-height:1.25}
+    .benefit p{font-size:12px;line-height:1.55;color:#586874;margin:0}
+    .bottom{margin-top:27px;background:#14212d;color:#fff;border-radius:11px;padding:20px 23px;display:grid;grid-template-columns:1fr auto;gap:25px;align-items:center}
+    .bottom strong{font:700 16px Manrope,Arial,sans-serif;letter-spacing:-.03em}
+    .bottom p{font-size:12px;line-height:1.5;color:#cbd6db;margin:5px 0 0;max-width:600px}
+    .bottom a{display:inline-block;white-space:nowrap;background:var(--orange);color:#1c2c35;text-decoration:none;padding:11px 15px;border-radius:6px;font-size:12px;font-weight:800}
+    .bottom a:hover{background:#f5b98d}
+    footer{padding:0 48px 25px;display:flex;gap:12px;align-items:start;justify-content:space-between;color:#6b7881;font-size:10px;line-height:1.45}
+    footer p{margin:0;max-width:550px}
+    .sources{text-align:right;white-space:nowrap}
+    .sources a{display:inline-block;margin-left:9px}
+    @media(max-width:650px){.sheet{width:100%;margin:0;box-shadow:none}.top{padding:24px 24px 32px}.mast{margin-bottom:35px;align-items:start}.mast-note{max-width:115px;line-height:1.4}.body{padding:27px 24px}.objection{grid-template-columns:1fr;gap:10px}.comparison{grid-template-columns:1fr}.lane:first-child{border-right:0;border-bottom:1px solid var(--line)}.benefits{grid-template-columns:1fr;gap:15px}.benefit{border-right:0;border-bottom:1px solid var(--line);padding-bottom:13px}.benefit:last-child{border:0;padding-bottom:0}.bottom{grid-template-columns:1fr;gap:14px}.bottom a{justify-self:start}footer{padding:0 24px 25px;display:block}.sources{text-align:left;white-space:normal;margin-top:12px}.sources a{margin:0 10px 0 0}}
+    @page{size:letter;margin:0}
+    @media print{html,body{background:#fff;print-color-adjust:exact;-webkit-print-color-adjust:exact}.sheet{width:8.5in;margin:0;box-shadow:none}.top{padding:21px 43px 26px}.mast{margin-bottom:22px}h1{font-size:44px}.dek{font-size:14px}.body{padding:23px 43px 14px}.objection{padding-bottom:16px}.section-label{margin:17px 0 9px}.lane{padding:14px 20px 12px}.benefits{margin-top:15px}.bottom{margin-top:16px;padding:14px 20px}footer{padding:0 43px 12px}a{text-decoration:none}}
+  </style>
+</head>
+<body>
+  <main class="sheet">
+    <header class="top">
+      <div class="mast"><div class="brand"><span class="mark" aria-hidden="true"><i></i><i></i><i></i></span><span>SageOx / the case</span></div><span class="mast-note">Independent product explainer</span></div>
+      <h1>Keep Claude.<br><em>Give it the team’s memory.</em></h1>
+      <p class="dek">Claude writes code. Slack carries updates. SageOx helps the next agent start with the decisions behind the work—and leaves a record for the session after that.</p>
+    </header>
+
+    <div class="body">
+      <section class="objection" aria-labelledby="objection-title">
+        <h2 id="objection-title">“Can’t the next agent just search Slack?”</h2>
+        <p>Yes. That works when the important decision was posted, the agent knows to look for it, and the right thread wins over older or partial answers. SageOx reduces those handoff steps: it records supported coding sessions, primes each new session with concise team context, and lets agents query deeper discussions and session history when they need it.<a href="#sources" aria-label="See sources for this claim">¹</a></p>
+      </section>
+
+      <p class="section-label">The difference in practice</p>
+      <section class="comparison" aria-label="Claude and Slack compared with Claude plus SageOx">
+        <div class="lane"><h3>Claude + Slack</h3><ul><li>An agent or teammate posts a useful summary of the work.</li><li>The next agent decides what to search and which answer is current.</li><li>Reasoning stays available if it made it into the post or linked thread.</li></ul></div>
+        <div class="lane"><h3>Claude + SageOx</h3><ul><li>Supported agent sessions are captured and summarized into a repo Ledger.</li><li>Shared rules and decisions enter the next session at startup; detailed records remain searchable.</li><li>Humans and agents can inspect the discussion or session behind a decision.</li></ul></div>
+      </section>
+
+      <section class="benefits" aria-label="Where SageOx can help">
+        <div class="benefit"><span class="number">01 / TIME</span><h3>Less reconstruction</h3><p>Repeated handoffs need fewer manual recaps and fewer searches for basic team context.</p></div>
+        <div class="benefit"><span class="number">02 / QUALITY</span><h3>More consistent decisions</h3><p>Agents can consult the same conventions, prior choices, and underlying sources before changing code.</p></div>
+        <div class="benefit"><span class="number">03 / SCALE</span><h3>Context across tools</h3><p>The same team context can serve Claude Code, Codex, and other supported agents.<a href="#sources" aria-label="See source for agent support">²</a></p></div>
+      </section>
+
+      <aside class="bottom"><div><strong>When is SageOx worth adding?</strong><p>When decisions span sessions, people, or agents often enough that missed context causes repeated explanation or rework. For a small team with disciplined Slack notes, Claude + Slack may already be enough. The gain should be measured in faster correct handoffs—not more messages.</p></div><a href="https://sageox.ai/docs/developers/how-it-works" target="_blank" rel="noopener noreferrer">See how it works ↗</a></aside>
+    </div>
+
+    <footer id="sources"><p>Product capabilities are drawn from SageOx documentation. Time and quality benefits describe the intended effect; no head-to-head benchmark is claimed. Independent explainer, not affiliated with SageOx.</p><div class="sources"><a href="https://sageox.ai/docs/developers/how-it-works" target="_blank" rel="noopener noreferrer">¹ How it works</a><a href="https://sageox.ai/docs/features/team-context" target="_blank" rel="noopener noreferrer">Team Context</a><a href="https://sageox.ai/docs/developers/coding-agents" target="_blank" rel="noopener noreferrer">² Supported agents</a></div></footer>
+  </main>
+</body>
+</html>
