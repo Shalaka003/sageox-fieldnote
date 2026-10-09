@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101824">
+  <meta name="description" content="Follow a real SageOx decision from a recorded conversation to an AI coding session and a merged pull request.">
+  <meta property="og:title" content="Follow one decision · A SageOx field guide">
+  <meta property="og:description" content="A guided, source-linked tour of a real SageOx workflow.">
+  <meta property="og:type" content="website">
+  <title>Follow one decision · A SageOx field guide</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="tour.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to the tour</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="wordmark" href="./" aria-label="Follow one decision, home"><span class="mark" aria-hidden="true"><span></span><span></span><span></span></span><span>FIELDNOTE <span class="wordmark-muted">/ 001</span></span></a>
+      <nav aria-label="Main navigation"><a href="#tour">The tour</a><a href="brief.html">The one-pager <span aria-hidden="true">↗</span></a></nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero shell" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="pulse-dot" aria-hidden="true"></span> AN INDEPENDENT SAGEOX FIELD GUIDE</div>
+        <h1 id="hero-title">Follow <em>one decision</em><br>all the way through.</h1>
+        <p class="hero-lede">A 75-second conversation became shared context. The next day, an agent found it. A pull request carried the trail forward. Explore the real artifacts in three steps.</p>
+        <div class="hero-actions"><a class="button button-primary" href="#tour">Start the 3-minute tour <span aria-hidden="true">↗</span></a><a class="text-link" href="https://sageox.ai/blog/introducing-sageox" target="_blank" rel="noopener noreferrer">Read SageOx’s original example <span aria-hidden="true">↗</span></a></div>
+        <p class="hero-meta">Real sources · No account needed for this guide · SageOx artifacts may require sign-in</p>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="orb orb-one"></div><div class="orb orb-two"></div>
+        <div class="diagram-node node-one"><span class="diagram-index">01 / CAPTURE</span><strong>“Remove the lock?”</strong><span>Feb 16 · 1:15 discussion</span></div>
+        <div class="diagram-line line-one"></div>
+        <div class="diagram-node node-two"><span class="diagram-index">02 / RETRIEVE</span><strong>“What did we decide?”</strong><span>Feb 17 · agent session</span></div>
+        <div class="diagram-line line-two"></div>
+        <div class="diagram-node node-three"><span class="diagram-index">03 / SHIP</span><strong>PR #4 merged</strong><span>Decision linked to code</span></div>
+      </div>
+    </section>
+
+    <section class="tour-wrap" id="tour" aria-labelledby="tour-title">
+      <div class="shell">
+        <div class="section-heading"><div><p class="kicker">THE EVIDENCE TRAIL</p><h2 id="tour-title">See what carries over.</h2></div><p>Each step links to the original artifact. This guide paraphrases the evidence; it does not simulate SageOx.</p></div>
+        <div class="tour-layout">
+          <nav class="step-nav" aria-label="Tour steps">
+            <button type="button" class="step-button active" data-step="capture" aria-current="step"><span class="step-num">01</span><span class="step-label"><strong>The decision</strong><small>Listen &amp; check the detail</small></span><span class="step-arrow" aria-hidden="true">↗</span></button>
+            <button type="button" class="step-button" data-step="retrieve"><span class="step-num">02</span><span class="step-label"><strong>The handoff</strong><small>Watch the agent recover it</small></span><span class="step-arrow" aria-hidden="true">↗</span></button>
+            <button type="button" class="step-button" data-step="ship"><span class="step-num">03</span><span class="step-label"><strong>The result</strong><small>Inspect the merged PR</small></span><span class="step-arrow" aria-hidden="true">↗</span></button>
+            <div class="step-note"><span class="step-note-icon" aria-hidden="true">◎</span><p><strong>Why this matters</strong><br>The corrected detail is small. Losing it changes the work an agent is asked to do.</p></div>
+          </nav>
+
+          <div class="step-content" id="step-content" aria-live="polite">
+            <article class="step-panel" data-panel="capture" aria-labelledby="capture-title">
+              <div class="panel-topline"><span>01 / CAPTURE</span><span class="source-tag"><span aria-hidden="true">●</span> REAL DISCUSSION</span></div>
+              <h3 id="capture-title">The detail worth remembering.</h3>
+              <p>Ryan and Ajit discuss removing <code>flock</code> and <code>setsid</code> from the Ox daemon. They agree the lock adds complexity as process management changes. Ajit corrects the timer during the conversation.</p>
+              <div class="question-card" id="question-card">
+                <span class="question-label">QUICK CHECK</span>
+                <p class="question-title">Was the daemon’s inactivity timer 15 minutes or 1 hour?</p>
+                <div class="choice-row"><button type="button" class="choice" data-answer="15">15 minutes</button><button type="button" class="choice" data-answer="60">1 hour</button></div>
+                <p class="answer" id="answer" hidden></p>
+              </div>
+              <div class="artifact-card"><div class="artifact-icon" aria-hidden="true">◉</div><div><strong>Original artifacts</strong><p>The recording includes audio, SageOx’s summary, and a transcript. The YouTube copy is available without signing in.</p><div class="artifact-links"><a href="https://www.youtube.com/watch?v=K5gy9MFfDqQ" target="_blank" rel="noopener noreferrer">Play 75-second video ↗</a><a href="https://sageox.ai/team/team_jihjpfkt8b/media/recordings/rec_019c688a-19c0-76f7-8763-597f072fc52f" target="_blank" rel="noopener noreferrer">Open in SageOx ↗ <span class="access-label">SIGN-IN</span></a></div></div></div>
+              <div class="panel-footer"><span>Feb 16, 2026</span><button type="button" class="next-button" data-next="retrieve">Next: the handoff <span aria-hidden="true">→</span></button></div>
+            </article>
+
+            <article class="step-panel" data-panel="retrieve" aria-labelledby="retrieve-title" hidden>
+              <div class="panel-topline"><span>02 / RETRIEVE</span><span class="source-tag"><span aria-hidden="true">●</span> REAL AGENT SESSION</span></div>
+              <h3 id="retrieve-title">The next session starts with the decision.</h3>
+              <p>The next day, Ajit asks his coding agent to work on the previous day’s “ox daemon improvements” discussion. In the published session, the agent finds the matching SageOx team discussion, reads its summary and transcript, and restates the decision before planning a change.</p>
+              <div class="trace-card"><span class="trace-caption">VISIBLE IN THE SESSION</span><ol><li><span>Request</span><strong>Work on yesterday’s daemon discussion</strong></li><li><span>Retrieval</span><strong>Agent reads the matching discussion in team context</strong></li><li><span>Output</span><strong>Agent prepares a file-by-file implementation plan</strong></li></ol></div>
+              <p class="caution"><span aria-hidden="true">ⓘ</span> This particular published session ends during planning. The later implementation is evidenced by the merged PR, not by this session transcript.</p>
+              <div class="artifact-card"><div class="artifact-icon" aria-hidden="true">↗</div><div><strong>Original artifact</strong><p>Inspect the session summary and the agent’s retrieval of the meeting context in SageOx.</p><div class="artifact-links"><a href="https://sageox.ai/repo/repo_019c5812-01e9-7b7d-b5b1-321c471c9777/sessions/2026-02-17T11-44-user-OxIOgz/" target="_blank" rel="noopener noreferrer">Open agent session ↗ <span class="access-label">SIGN-IN</span></a></div></div></div>
+              <div class="panel-footer"><button type="button" class="back-button" data-next="capture"><span aria-hidden="true">←</span> Back</button><button type="button" class="next-button" data-next="ship">Next: the result <span aria-hidden="true">→</span></button></div>
+            </article>
+
+            <article class="step-panel" data-panel="ship" aria-labelledby="ship-title" hidden>
+              <div class="panel-topline"><span>03 / SHIP</span><span class="source-tag"><span aria-hidden="true">●</span> MERGED ON GITHUB</span></div>
+              <h3 id="ship-title">The code keeps the trail.</h3>
+              <p>Pull request #4 removes lock-based liveness detection and the related detach logic. Its description links both the original discussion and the SageOx session, so a reviewer can inspect the reasoning behind the code.</p>
+              <div class="pr-card"><div class="pr-status"><span class="merged-dot" aria-hidden="true">✓</span> MERGED · FEB 17, 2026</div><strong>replace flock-based daemon liveness with socket-ping detection</strong><p>sageox/ox · pull request #4</p><div class="pr-links"><span>Discussion ↗</span><span>Session ↗</span><span>Code ↗</span></div></div>
+              <div class="artifact-card"><div class="artifact-icon" aria-hidden="true">⌁</div><div><strong>Original artifact</strong><p>The public PR contains the change summary, source links, and merged status.</p><div class="artifact-links"><a href="https://github.com/sageox/ox/pull/4" target="_blank" rel="noopener noreferrer">Inspect PR #4 ↗</a></div></div></div>
+              <div class="panel-footer"><button type="button" class="back-button" data-next="retrieve"><span aria-hidden="true">←</span> Back</button><a class="next-button" href="#next-step">Try your own loop <span aria-hidden="true">↓</span></a></div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="takeaway shell" aria-labelledby="takeaway-title"><span class="kicker">THE POINT</span><h2 id="takeaway-title">The useful part is the <em>handoff.</em></h2><p>A short conversation preserved a correction that mattered. A later agent found that discussion without Ajit restating it. The PR made the sources inspectable for the next person. That is the workflow this tour lets you verify.</p><div class="flow-strip" aria-label="The verified workflow"><span>Conversation</span><b aria-hidden="true">→</b><span>Team context</span><b aria-hidden="true">→</b><span>Agent session</span><b aria-hidden="true">→</b><span>Pull request</span></div></section>
+
+    <section class="next-section" id="next-step" aria-labelledby="next-title"><div class="shell next-inner"><div><p class="kicker">READY TO TRY IT?</p><h2 id="next-title">Start with your own context.</h2><p>SageOx has separate setup paths. Choose the one that matches how you work.</p></div><div class="next-links"><a href="https://sageox.ai/docs/quickstart/solo" target="_blank" rel="noopener noreferrer"><span><strong>Building solo</strong><small>Connect a repo and start capturing your own decisions.</small></span><span aria-hidden="true">↗</span></a><a href="https://sageox.ai/docs/quickstart/team-setup" target="_blank" rel="noopener noreferrer"><span><strong>Setting up a team</strong><small>Connect a repo, invite teammates, and record a discussion.</small></span><span aria-hidden="true">↗</span></a><a href="https://sageox.ai/team/team_jihjpfkt8b" target="_blank" rel="noopener noreferrer"><span><strong>Explore the open-source team</strong><small>See more of SageOx’s own published work. Sign-in may be required.</small></span><span aria-hidden="true">↗</span></a></div></div></section>
+  </main>
+  <footer class="site-footer"><div class="shell footer-inner"><div><strong>FIELDNOTE / 001</strong><p>Independent project by Shalaka Deshpande. Not affiliated with SageOx.</p></div><div><a href="brief.html">Read the one-pager ↗</a><a href="https://sageox.ai/blog/introducing-sageox" target="_blank" rel="noopener noreferrer">Source: SageOx launch example ↗</a></div></div></footer>
+</body>
+</html>
