@@ -2,6 +2,8 @@
 
 An independent, source-linked guided tour of a real SageOx workflow: a recorded decision, an agent session that retrieves it, and a merged pull request that links the evidence. The [one-pager](brief.html) explains the observed friction, the GTM hypothesis, and its limits.
 
+**Live site:** https://shalaka003.github.io/sageox-fieldnote/
+
 ## Run locally
 
 ```sh
